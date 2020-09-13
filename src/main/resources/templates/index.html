@@ -2,14 +2,14 @@
 <html lang="en">
   <title> Data Collector App</title>
   <head>
-    <link href="main.css" rel="stylesheet">
+    <link href="main.css" Content-Type = "application/json" rel="stylesheet">
   </head>
     <body>
       <div class="container">
         <h1>Collecting height</h1>
         <h3>Please fill the entires to get population statistics on height</h3>
 
-        <form action="${pageContext.request.contextPath}/add" method="POST">
+        <form action="/add" method="POST">
           <input title="Your email will be safe with us" placeholder="Enter your email address" type="email" name="email" required> <br>
           <input title="Your data will be safe with us" placeholder="Enter your height in cm" type="number" min="50", max="300" name="height" required> <br>
           <button type="submit"> Submit </button>

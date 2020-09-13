@@ -16,7 +16,7 @@ public class HeightAppController {
     private HeightRepository rep;
 
 
-    @PostMapping(path="/add") // Map ONLY POST Requests
+    @PostMapping(path="/add2") // Map ONLY POST Requests
     //if there added @ResponseBody, the returned message is only a word: "success" rather than success.html
 //    public @ResponseBody String addNewUser (@RequestParam String email
     public String addNewUser (@RequestParam String email
@@ -31,10 +31,12 @@ public class HeightAppController {
         return "success";
     }
 
-    @PostMapping("/add2")
-    public  String addNewUser2 () {
+    @PostMapping("/add")
+    String creatOrderJ(@RequestBody User remote){
+        rep.save(remote);
         return "success";
     }
+
     @GetMapping("/add3")
     public String home3(){
         return "index";
